@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy | Super Sunny Bulk Creator</title>
+  <style>
+    :root { color-scheme: light; font-family: system-ui, sans-serif; color: #172720; background: #f6f8f4; }
+    body { margin: 0; border-top: .45rem solid #38644e; }
+    main { max-width: 44rem; margin: auto; padding: 3rem 1.5rem 4rem; line-height: 1.65; }
+    h1, h2 { line-height: 1.2; }
+    h1 { font-size: clamp(2rem, 7vw, 3.25rem); margin: .2rem 0 .7rem; }
+    h2 { font-size: 1.25rem; margin: 2rem 0 .45rem; }
+    p { margin: .45rem 0 .85rem; }
+    .operator, .date { color: #42584d; }
+    a { color: #245b45; }
+    a:focus-visible { outline: 2px solid #245b45; outline-offset: 4px; }
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <p class="operator">Super Sunny Bulk Creator · Super Sunny Sales</p>
+    <h1>Privacy Policy</h1>
+    <p class="date">Effective <time datetime="2026-11-18">November 18, 2026</time></p>
+  </header>
+  <p>This policy covers eBay information processed by Super Sunny Bulk Creator, a Windows application operated by Super Sunny Sales, and its eBay authorization and account-deletion service.</p>
+
+  <h2>Seller authorization and account information</h2>
+  <p>You sign in and grant access on eBay. The application does not ask for your eBay password. When you authorize the connection, the application uses the seller identifiers, account status, and registration marketplace returned by eBay to verify the approved seller account. It keeps the seller identifiers and marketplace needed to operate the connection and match an account-deletion request. Other profile fields returned by eBay are discarded.</p>
+  <p>When the read-only catalog tools are separately enabled and used, they can retrieve seller listing information, including listing IDs, titles, descriptions, SKUs, categories, item specifics, variations, image URLs and prices. This information is used to review the seller's listings and match them to the seller's own product records. The integration does not request buyer contact details, shipping addresses, order histories or messages. The current authorization setup does not fetch listings or change them.</p>
+
+  <h2>Storage and use</h2>
+  <p>Cloudflare hosts the authorization callback and deletion notification service. The authorization state and one-time handoff result are held in memory and expire after ten minutes. Application credentials on Cloudflare are encrypted Secrets. On Windows, the refresh grant and seller-linked records are encrypted with Windows Data Protection API and per-record keys held in Windows Credential Manager. Access tokens are held in memory. The application uses eBay data for the purposes described here and does not sell it or use it for advertising.</p>
+
+  <h2>Retention and deletion</h2>
+  <p>We retain seller-linked records for as long as needed for the authorized work. Disconnecting the seller through the application removes the locally stored grant and associated managed data. You can also revoke access through eBay's connected-app settings.</p>
+  <p>When eBay sends a signed account-deletion notice, the service verifies it and queues keyed identifiers needed to match the request. The Windows poller removes matching records and their keys from the dedicated store and its registered encrypted backups, then acknowledges completion. The cloud queue retains unacknowledged work until it can be processed. Completed receipts have a 35-day retention period. Cloudflare point-in-time recovery may retain up to 30 days of keyed database history. The Windows store keeps keyed deletion markers while the installation is active to prevent deleted records from being imported again.</p>
+
+  <h2>Questions and requests</h2>
+  <p>For a question or a request about information held by the application, contact Super Sunny Sales using eBay Messages through the Super Sunny Sales storefront. Please omit passwords and authorization codes. For information eBay holds, see the <a href="https://www.ebay.com/help/policies/member-behavior-policies/user-privacy-notice-privacy-policy?id=4260">eBay User Privacy Notice</a>.</p>
+</main>
+</body>
+</html>
